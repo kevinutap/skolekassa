@@ -1,0 +1,1147 @@
+/*
+Theme Name: Skolekassa 2017
+Theme URI: https://eirikhanssen.com/wp-themes/skolekassa
+Author: Eirik Hanssen
+Author URI: http://eirikhanssen.com
+Description: skolekassa 2017 is a child theme of Twenty Sixteen.
+Template: twentysixteen
+Version: 0.3
+License: GNU Generals Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, red, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: skolekassa-2017
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+.logged{
+    background-repeat: no-repeat;
+    background-position: right 10px top 10px;
+    background-size: 1em;
+    position: relative;
+
+}
+
+.logged::after{
+    content: "\f158";
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    bottom: 0px;
+}
+
+a.feide {
+    border: 4px solid white !important;
+    display: block;
+    background-color: white;
+    border-radius: .25em;
+    padding: .25em;
+    margin: .25em 0;
+    font-family: sans-serif;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    right: -2px;
+    box-sizing: border-box;
+    padding-left: 4em;
+    border: 5px solid white;
+    margin-bottom: 2em;
+    margin-left: 0em !important;
+    padding-left: 5em !important;
+}
+
+#secondary a.feide:hover,
+#secondary a.feide:focus,
+a.feide:active {
+    background-color: #ffff64;
+    border-color: #ffff64;
+    box-shadow: 0 0 10px white;
+}
+
+a.feide img {
+    position: absolute;
+    left: 0;
+    height: auto;
+    width: 4em;
+    padding: 0;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+}
+
+.feideinfo {
+    display: none;
+    position: absolute;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+html[lang*=en] .feideinfo.en,
+html[lang=nb-NO] .feideinfo.no,
+html[lang=nn-NO] .feideinfo.nn,
+html[lang=ar] .feideinfo.ar,
+html[lang=so] .feideinfo.so,
+html[lang=ps] .feideinfo.ps,
+html[lang=prs] .feideinfo.prs,
+html[lang=kmr] .feideinfo.kmr,
+html[lang=ti] .feideinfo.ti {
+    display: block;
+    margin-top: .75em;
+    font-size: .75em;
+    left: -3px;
+    right: -3px;
+    color: black;
+    top: 100%;
+}
+
+
+
+
+/*1. background*/
+
+body {
+    background-color: transparent;
+    font-family: sans, sans-serif;
+    overflow-x:hidden;
+}
+
+#page {
+    margin: 0;
+}
+
+
+/* 1. end */
+
+
+/* 2. first page */
+
+
+/* hide menus on first page */
+
+body.home .sidebar,
+body.home #lang_sel,
+body.home #site-navigation {
+    display: none;
+}
+
+body.home .entry-header {position: absolute; left: -9999px;}
+
+
+/* make room for background image */
+
+body.home {
+    margin-bottom: 100px;
+    min-height: 400px;
+}
+
+body.home footer {
+    display: none;
+}
+
+body.home main {
+    margin: 0;
+}
+
+body.home,
+body.home .site,
+body.home main {
+    background-color: transparent;
+}
+
+body.home h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+body.home .welcome {
+    text-align: center;
+}
+
+body.home .welcome li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 2em;
+}
+
+body.home .welcome a {
+    background-color: white;
+    font-weight: bold;
+    display: inline-block;
+    padding: 1.5em;
+    line-height: 1em;
+    border-radius: 50%;
+    box-shadow: 0 0 3em rgba(255, 255, 255, 1), 0 0 .1em rgba(255, 255, 255, 1);
+    margin: .75em;
+    min-width: 9em;
+}
+
+body.home main a:hover,
+body.home main a:focus {
+    background-color: rgba(255, 255, 128, 1);
+    color: black;
+    box-shadow: 0 0 3em rgba(255, 255, 128, 1), 0 0 .1em rgba(255, 255, 128, 1);
+}
+
+body.home .content-area {
+    float: none;
+    margin: auto;
+    width: 100%;
+}
+
+
+/* first page play buttons */
+
+.welcome button {
+    color: white;
+    background-color: rgb(30, 50, 100);
+}
+
+.welcome button:hover {
+    background-color: white;
+    color: black;
+}
+
+.welcome button:focus {
+    background-color: yellow;
+    color: black;
+}
+
+
+/* 2. first page END*/
+
+
+/* 3. background */
+
+html {
+    background: rgb(135, 188, 234);
+    /* Old browsers */
+    position: relative;
+    z-index: 1;
+}
+
+html::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2989d8+0,cce5ff+100 */
+    background: rgb(41, 137, 216);
+    /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(41, 137, 216, 1) 0%, rgba(204, 229, 255, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(41, 137, 216, 1) 0%, rgba(204, 229, 255, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(41, 137, 216, 1) 0%, rgba(204, 229, 255, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    z-index: -2;
+}
+
+html::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(img/skolekassa_footer_bg_1127x300.png);
+    background-repeat: repeat-x;
+    background-position: bottom center;
+    z-index: -1;
+}
+
+body {
+    margin-bottom: 400px;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+
+html {
+    min-height: 100%;
+}
+
+
+/* remove pseudo class stripes top and bottom that is introduced in twentysixteen theme */
+
+html body:before,
+html body:after {
+    display: none !important;
+}
+
+.site {
+    background-color: transparent;
+}
+
+main {
+    background-color: white;
+    padding: 1em;
+    border-radius: .25em;
+}
+
+
+/* 3. background end */
+
+
+/* 4. major blocks */
+
+.site-inner {
+    max-width: 1600px;
+}
+
+
+/* fix some responsive margins and paddings of major blocks */
+
+@media screen and (min-width: 44.375em) and (max-width: 56.875em) {
+    .sidebar {
+        padding-right: 7.6923%;
+    }
+    .entry-header,
+    .post-thumbnail,
+    .entry-content,
+    .entry-summary,
+    .entry-footer,
+    .comments-area,
+    .image-navigation,
+    .post-navigation,
+    .page-header,
+    .page-content,
+    .content-bottom-widgets {
+        margin-right: 7.6923%;
+    }
+}
+
+@media screen and (min-width: 56.875em) {
+    .content-area {
+        float: left;
+        margin-right: -100%;
+        width: 75%;
+        padding-right: 1rem;
+    }
+    .site-content {
+        padding: 0;
+    }
+    .site-main {margin-bottom: 1rem;}
+}
+
+
+/* 4. major blocks END */
+
+
+/* 5. all menus common */
+
+@media screen and (min-width: 56.875em) {
+    #site-navigation {
+        margin: 0;
+        border-radius: .25em;
+        padding: 0em;
+        border: none;
+        text-align: center;
+        display: inline-block;
+    }
+}
+
+#page .sidebar section {
+    border: none;
+    margin: 0;
+    /*padding: .25rem;*/
+    border-radius: .25rem;
+    margin-top: -1px;
+    /*background-color: white;*/
+}
+
+#page .sidebar section+section {
+    margin-top: .5rem;
+}
+
+#page .sidebar section h2 {
+    text-align: center;
+    margin: .5rem;
+}
+
+
+/* 5. all menus common END */
+
+
+/* 6. sidebar menus */
+
+
+/*#page .sidebar section {
+    background-color: #eee;
+}*/
+
+#page .sidebar li a {
+    color: black;
+}
+
+#page .sidebar li a:hover,
+#page .sidebar li a:focus,
+#site-navigation a:hover,
+#site-navigation a:focus {
+    background: rgb(255, 255, 100) !important;
+}
+
+
+/* menu colors end */
+
+#page .sidebar {
+    font-family: sans-serif;
+}
+
+@media screen and (min-width: 56.875em) {
+    #page .sidebar {
+        padding: 0;
+        margin-left: 0;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+    #page .sidebar ul {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 56.875em) {
+    #page .sidebar {
+        margin-top: -.75rem;
+    }
+    #site-header-menu::after {
+        content: "";
+        height: 2em;
+        display: block;
+        background-color: #3B93DD;
+    }
+}
+
+#page .sidebar li {
+    list-style-type: none;
+    line-height: 1.5rem;
+    position: relative;
+    z-index: 1;
+	border-radius: 5px; /*added 16.05.2019*/
+}
+
+#page .sidebar button {
+    width: 2.5rem;
+    position: absolute;
+    z-index: 3;
+    line-height: 1.1rem;
+    left: 0;
+    margin-left: 4px;
+}
+
+#page .sidebar section > div > ul {
+    margin-left: 0;
+}
+
+#page .sidebar li {}
+
+#page .sidebar a {
+    padding: .5em;
+    display: block;
+    margin-right: .25em;
+    margin-top: .25em;
+    margin-left: 3rem;
+    margin-bottom: .25em;
+    border-radius: .25em;
+    border-radius: .25em;
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    position: relative;
+    border: 1px solid black;
+}
+
+#page .sidebar li + li a {
+    margin-top: .75em
+}
+
+#page .sidebar a::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    /*background-color: rgb(120,190,255);*/
+    /*background-color: white;*/
+    z-index: -1;
+    left: -3rem;
+    right: -.25rem;
+    top: -.25rem;
+    bottom: -.25em;
+    border-radius: .25em;
+}
+
+ul.sub-menu { 
+    margin-top: .75em;
+    margin-left: 0;
+}
+
+.current-menu-item,
+.current-page-parent {
+    background-color: #99e8ff !important;
+}
+
+.current-menu-item > a {
+    background-color: rgb(200, 255, 150) !important;
+    font-weight: bold;
+}
+
+.current-menu-item a::after,
+.current-page-parent a::after {
+    background-color: #99e8ff !important;
+}
+
+.current-menu-item .sub-menu {}
+
+.widget-title {
+    position: absolute;
+    left: -9999px;
+}
+
+
+/* 6.1 secondary menu */
+
+#page .sidebar ul ul {
+    display: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#page .sidebar .current-page-parent ul,
+#page .current-menu-item.menu-item-has-children ul {
+    display: block;
+}
+
+
+/* 6.1 secondary menu END */
+
+
+/* 6.2 secondary menu show plus sign for expandable menu */
+
+#page .menu-item-has-children > a:before {
+    content: "+";
+    height: 1em;
+    width: 1em;
+    float: right;
+}
+
+html[dir=rtl] #page .menu-item-has-children > a:before {
+    float: left;
+}
+
+
+/* show plus sign if the menu item has sub items */
+
+#page .sidebar .current-page-parent > a:before,
+#page .current-menu-item.menu-item-has-children > a:before {
+    content: "";
+    height: 1em;
+    width: 1em;
+    float: right;
+}
+
+
+/* 6.2 END */
+
+
+/* 6. sidebar menus END */
+
+
+/* 7. main menu */
+
+#site-navigation a:hover,
+#site-navigation a:focus {
+    background: white;
+}
+
+@media screen and (min-width: 56.875em) {
+    #site-navigation li {
+        margin: .25em;
+        /*background-color: rgb(120,190,255);*/
+        background-color: white;
+        padding: .25em;
+        border-radius: .25em;
+        display: inline-block;
+    }
+}
+
+#site-navigation li button + a,
+.menu li button + a {
+    display: inline;
+}
+
+#site-navigation li button {
+    display: inline;
+    text-align: center;
+    width: 2.5rem;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+html[dir=rtl] #site-navigation li button {
+    margin-right: 0;
+    margin-left: .25em;
+}
+
+@media screen and (min-width: 56.875em) {
+    #site-navigation a {
+        border-radius: .25em;
+        background-color: white;
+        color: black;
+        box-sizing: border-box;
+        border: 1px solid #999;
+    }
+}
+
+@media screen and (max-width: 56.875em) {
+    #site-header-menu.toggled-on {
+        position: relative;
+        top: 9.5rem;
+    }
+    #site-header-menu.toggled-on li {
+        position: relative;
+        background-color: white;
+    }
+    #site-header-menu.toggled-on button {
+        position: absolute;
+        left: .25rem;
+        top: .25rem;
+    }
+    #site-header-menu.toggled-on a {
+        display: block;
+        margin-left: 3rem;
+        text-align: left;
+    }
+    html[dir=rtl] #site-header-menu.toggled-on a {
+        text-align: right;
+        padding-right: 1rem;
+    }
+}
+
+
+/*id="site-header-menu" class="site-header-menu toggled-on">*/
+
+
+/* 7. main menu END*/
+
+
+/* 8. header containing main menu, language select and branding */
+
+.site-header {
+    padding: 0;
+    margin-bottom: .75rem;
+}
+
+#site-header-menu {
+    /*display: block; */
+    width: 100%;
+    /*text-align: center;*/
+    text-align: right;
+    margin: 0;
+    /*background-color: white;*/
+    border-radius: .25em;
+    padding: 0;
+    line-height: 0.6em;
+    margin-top: 6rem;
+}
+
+
+/* 8. header containing main menu, language select and branding END */
+
+
+/* 9. linked images to resources */
+
+.entry-content {
+    display:flex;
+    flex-flow: row wrap;
+}
+
+.entry-content > h2,
+.entry-content > h3, 
+.entry-content > h4,
+.entry-content > p,
+.entry-content > table,
+.entry-content > ul {
+    width: 100%;
+}
+
+.entry-content ul {
+    margin-left: 2rem;
+}
+
+.entry-content figure.wp-caption {
+    width: 15em !important;
+    min-height: 16em;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 8px;
+    padding-top: 135px;
+    position: relative;
+    border-radius: .25em;
+    max-width: 30%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+figure.wp-caption a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    box-shadow: none;
+    border: 5px solid transparent;
+    padding-top: 10px;
+    border-radius: .25em;
+}
+
+figure.wp-caption a:hover,
+figure.wp-caption a:focus {
+    border-color: orange;
+    box-shadow: 0 0 10px #333;
+}
+
+.wp-caption img[class*="wp-image-"] {
+    border: 1px solid black;
+    box-sizing: content-box;
+    margin: auto;
+    display: inline-block;
+    width: 180px;
+    height: 120px;
+}
+
+.wp-caption .wp-caption-text {
+    min-height: 100px;
+    box-sizing: border-box;
+    padding: .5em;
+    padding-top: .75em;
+    font-family: sans-serif;
+    font-style: normal;
+    /*font-size: 1rem;*/
+	font-size: 1.4rem;
+    /*line-height: 1.25rem;*/
+	line-height: 2.25rem;
+    color: black;
+	text-align: center;
+}
+
+
+/* 9. linked images to resources END */
+
+
+/* 10. language selection */
+
+.page #lang_sel {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    z-index: 10;
+}
+
+.page #lang_sel > ul > li {}
+
+.page #lang_sel > ul > li > a {
+    line-height: 2.5rem;
+    font-size: 1.5rem; /* 2rem;*/
+}
+
+.page #lang_sel li {
+	width: 26em; /* 20em;*/
+    line-height: 1.5em;
+    background-color: white;
+}
+
+.page #lang_sel li {
+    border-top: 1px solid black;
+}
+
+#lang_sel a:hover,
+#lang_sel ul ul a:hover,
+#lang_sel:hover > a,
+#lang_sel ul ul:hover > a,
+.page #lang_sel li:hover {
+    background-color: rgb(255, 255, 128);
+}
+
+#lang_sel ul {
+    box-sizing: border-box;
+}
+
+#lang_sel ul ul {
+    width: 20em;
+    border: none;
+    top: 100%;
+    left: -1px;
+}
+
+#lang_sel ul ul li {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+#lang_sel ul ul li:last-child {
+    border-bottom: 1px solid gray;
+}
+
+.page #lang_sel a {
+    font-size: 1em;
+    margin: .25em 0;
+    border: none;
+    margin-right: .5rem;
+    padding-right: 1rem;
+}
+
+#lang_sel > ul > li {
+    border: 1px solid gray;
+}
+
+@media screen and (max-width: 56.875em) {
+    .page #lang_sel {
+        right: 0;
+        top: 6rem;
+    }
+    .page #lang_sel li {
+        max-width: 17em;
+    }
+    .page #lang_sel > ul {
+        position: absolute;
+        right: 0;
+    }
+    .page #lang_sel,
+    .site-header-main {
+        position: relative;
+        display: block;
+        margin: 0;
+    }
+    .site-header-main {
+        margin-bottom: 8rem;
+    }
+    .site-branding {
+        margin-top: -2em !important;
+    }
+    .sidebar {
+        padding: 0;
+    }
+    #site-header-menu {
+        margin-top: 0rem;
+    }
+
+}
+
+
+
+
+/* 10. language selection END */
+
+
+/* 11. site branding */
+
+.site-branding {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    padding: 1.25rem;
+    border-radius: .25rem;
+    color: white;
+}
+
+.site-branding .site-title a {
+    background-image: url(img/skolekassa_boksen_240x200.png);
+    background-position: right .5rem center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 6rem;
+    padding-left: 1rem;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+.site-branding .site-title a:hover,
+.site-branding .site-title a:focus {
+    color: yellow;
+    border: 1px solid white;
+}
+
+@media screen and (max-width: 56.875em) {
+    .site-branding {
+        right: 0;
+        margin: auto;
+        display: block;
+        text-align: center;
+    }
+}
+
+
+/* 11. site branding END */
+
+
+/* 12. menu toggle button */
+
+#menu-toggle {
+    position: absolute;
+    top: -7em;
+    left: .25em;
+    z-index: 20;
+    font-size: 1.2em;
+    padding: 1em;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#menu-toggle.toggled-on {
+    background-color: black;
+    top: 0em !important;
+}
+
+
+/* 13. hover and focus styles */
+
+/* 14. footer styles */
+@media screen and (min-width: 56.875em) {
+.site-footer {padding:0;}
+}
+
+.site-info {
+    display:block;
+    width: 100%;
+    margin:0;
+    font-size: 1rem;
+    margin: auto;
+    color: black;
+    background-color: white;
+    padding: 1rem;
+    border-radius: .25rem;
+    margin-bottom: 0;
+    text-align:center;
+}
+.site-info a:link,
+.site-info a:visited
+ {
+    color: blue;
+    border:none;
+}
+.site-info a:hover, a:focus {}
+
+#skolekassa_editor {
+    background-image: url(img/nafologo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+    display:inline-block;
+}
+
+#skolekassa_editor span {
+    display: inline-block;background-color: yellow; width: 48px; height: 22px;
+    position: relative; left: -9999px;
+}
+
+/* Currently loggedin user name */
+
+.top-login-container {
+    width: 100%;
+    height: 50px;
+}
+
+.top-login {
+    float: right;
+    width: 200px;
+    padding: 5px;
+    text-align:right;
+}
+
+.right {float: right; margin-left: 1em;}
+.left {float: left; margin-right: 1em;}
+
+.colcontainer::after {
+    content:"";
+    display:block;
+    height:0px;
+    clear:both;
+}
+
+.col50 {
+    width: 50%;
+    float: left;
+    padding: .25em;
+}
+
+/* legg litt luft rundt lister i kolonner (høyre og venstremarg) */
+.colcontainer ul,
+.colcontainer ol {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/* play buttons */
+
+#site-navigation li {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#site-navigation li > * {
+    height: 2.5rem;
+}
+
+#site-navigation li > button + a {
+    height:2.5rem;
+    line-height:2.5rem;
+    padding:0 .5rem;
+}
+
+button.play.material-icons {
+    position: relative;
+    display: inline-block;
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+button.play.material-icons::after {
+    position: absolute;
+    content:"play_arrow";
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    color: white;
+    margin:auto;
+    line-height: 2.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#secondary .menu button.play, 
+#site-navigation button.play {
+     width:2.5rem;
+     height:2.5rem;
+}
+
+#site-navigation button.play {
+    position: relative;
+}
+
+/*Content Views CSS*/
+.pt-cv-page {
+    position: relative !important;
+    display: flex !important;
+    flex-flow: row wrap !important;
+}
+
+.pt-cv-content-item {
+    /* flex: 1; */
+    margin: 20px;
+    padding: 0px !important;
+    border: 1px solid #777;
+    border-radius: 0.4em;
+    width: 230px !important;
+	/*display: flex;*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+}
+
+img.pt-cv-thumbnail {
+    /* border: 1px solid #eee; */
+    width: auto;
+    height: 110px;
+    margin: auto;
+    margin-top: 1em !important;
+    border-radius:0.5em;
+}
+
+.pt-cv-content-item:hover {
+    border-color: orange;
+    border: 1px solid orange;
+    background: rgba(255, 255, 128, 0.47)  !important;
+}
+
+.pt-cv-content-item a:focus{
+    /*border-color: orange !important;*/
+    background: rgba(255, 255, 128, 0.47)  !important;
+	padding-top: 0.1em !important;
+}
+
+.pt-cv-ifield {
+    /* margin-top: 1em; */
+}
+
+.pt-cv-ifield>a {
+    position: relative;
+    /* top: 0; */
+    /* left: 0; */
+    /* right: 0; */
+    /* bottom: 0; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* display: block; */
+    /* text-align: center; */
+    /* box-shadow: none; */
+    /* border: 5px solid transparent; */
+    /* padding-top: 10px; */
+    /* border-radius: .25em; */
+    padding-bottom: 14em;
+    /*padding-top: 0.1em; */
+    /* padding-left: 1em; */
+    /* padding-right: 1em; */
+    /* margin-left: -1em; */
+    /* margin-right: -1em; */
+    margin-bottom: -14em;
+    /* margin-top: -0.1em; */
+    display: block;
+    z-index: 1;
+    /* width: 100%; */
+    /* height: 100%; */
+    /* cursor: pointer; */
+    /* display: inline-block; */
+}
+
+.pt-cv-content {
+    margin: 20px;
+}
+
+a.pt-cv-tax-lisens {
+    pointer-events: none;
+}
+
+a[title="lisens"]::after{
+font-family: "Font Awesome 5 Free";
+font-size: 1em;
+font-weight: 900;
+content: "\00a0\f023\00a0";
+vertical-align: middle;
+}
+
+/*shifte språk ikon på språkmeny*/
+.page #lang_sel > ul > li > a[href="#"]::before{
+font-family: "Font Awesome 5 Free";
+font-size: 1.5em;
+font-weight: 900;
+content: "\f1ab\00a0\00a0";
+vertical-align: bottom;
+}
+
+/*kombinasjonklasser accordion*/
+.kombi{
+	width: 100%;
+}
+
+.kombi h2 {
+    margin-top: 0em !important;
+    margin-bottom: 0em !important;
+}
+
+/* Underkategori overskrift H2*/
+.wp-caption-text h2{
+	font-size: 1.4rem;
+}
